@@ -35,7 +35,7 @@ class SeoulCrime:
       station_addrs = []
       station_lats = [] # 위도
       station_lngs = [] # 경도
-      gmaps = googlemaps.Client(key='AIzaSyCnfFlHUWzghRMXTc_L-a3RrON1BekSFjA')
+      gmaps = googlemaps.Client(key='')
       for name in station_names:
           t = gmaps.geocode(name, language='ko')
           station_addrs.append(t[0].get('formatted_address'))
