@@ -16,7 +16,8 @@ class Police:
 
   def hook_process(self):
     print('----------------------- POLICE -----------------------')
-    self.create_crime_rate()
+    # self.create_crime_rate()
+    self.get_police_norm()
 
   def create_crime_rate(self):
     crime = SeoulCrime()
@@ -52,11 +53,15 @@ class Police:
       police_norm['검거'] = np.sum(police_norm[crime_columns], axis=1)
       police_norm.to_csv('./model/data/police_norm.csv', sep=',', encoding='utf-8')
 
-
   def get_cctv_pop(self):
     cctv_pop = pd.read_csv('./model/data/cctv_pop.csv', sep=',', index_col='구별')
     print(f'{cctv_pop.head()}')
     return cctv_pop
+
+  def get_police_norm(self):
+    get_police_norm = pd.read_csv('./model/data/police_norm.csv')
+    print(f'{get_police_norm.head()}')
+    return get_police_norm
 
 if __name__ == "__main__":
     police = Police()

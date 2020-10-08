@@ -15,3 +15,10 @@ __2.3.4 대규모 머신 러닝과 확률적 경사 하강법
 분류 알고리즘
   1. 퍼셉트론 
   2. 아달라인 : 퍼셉트론의 upgrade 버전
+
+Cost Function
+Activation Function
+    선형 활성화
+    비선형 활성화
+Identity Function
+Object Function : minimized cost function
